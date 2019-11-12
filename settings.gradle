@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name='IUC-Android-Workshop-01'
