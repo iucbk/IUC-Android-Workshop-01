@@ -3,12 +3,10 @@ package com.miracozkan.iuc_android_workshop_01
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity : AppCompatActivity() {
+class DetailActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
-        //https://api.myjson.com/bins/h22f8
+        setContentView(R.layout.activity_detail)
     }
 }
