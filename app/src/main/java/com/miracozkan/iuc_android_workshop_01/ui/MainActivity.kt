@@ -1,9 +1,12 @@
-package com.miracozkan.iuc_android_workshop_01
+package com.miracozkan.iuc_android_workshop_01.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
+import com.miracozkan.iuc_android_workshop_01.R
+import com.miracozkan.iuc_android_workshop_01.adapter.MovieListAdapter
 import com.miracozkan.iuc_android_workshop_01.remote.BaseResponse
 import com.miracozkan.iuc_android_workshop_01.remote.RetrofitClient
 import kotlinx.android.synthetic.main.activity_main.*
@@ -21,9 +24,12 @@ class MainActivity : AppCompatActivity() {
 
         //https://api.myjson.com/bins/h22f8
 
-        with(recycMovieList) {
-            adapter = MovieListAdapter {
+        val intent = Intent(this@MainActivity, DetailActivity::class.java)
 
+        recycMovieList.apply {
+            adapter = MovieListAdapter { _data ->
+                intent.putExtra("movieItem", _data)
+                startActivity(intent)
             }
             layoutManager = GridLayoutManager(this@MainActivity, 2)
         }

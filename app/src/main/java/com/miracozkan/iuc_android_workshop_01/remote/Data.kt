@@ -1,5 +1,9 @@
 package com.miracozkan.iuc_android_workshop_01.remote
 
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
+@Parcelize
 data class Data(
     val about: String,
     val director: String,
@@ -8,4 +12,4 @@ data class Data(
     val poster: String,
     val title: String,
     val year: String
-)
+) : Parcelable

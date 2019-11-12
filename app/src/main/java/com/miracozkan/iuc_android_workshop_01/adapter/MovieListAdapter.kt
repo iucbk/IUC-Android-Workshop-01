@@ -1,4 +1,4 @@
-package com.miracozkan.iuc_android_workshop_01
+package com.miracozkan.iuc_android_workshop_01.adapter
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
