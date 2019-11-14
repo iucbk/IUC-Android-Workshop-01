@@ -19,7 +19,7 @@ class MovieListAdapter(
     private val onItemClickListener: (Data) -> Unit
 ) : RecyclerView.Adapter<MovieListViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieListViewHolder =
-        (MovieListViewHolder(parent))
+        MovieListViewHolder(parent)
 
     override fun getItemCount(): Int {
         movieList?.let {

@@ -2,8 +2,8 @@ package com.miracozkan.iuc_android_workshop_01.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.appcompat.widget.AppCompatImageView
-import androidx.appcompat.widget.AppCompatTextView
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.miracozkan.iuc_android_workshop_01.R
 import com.miracozkan.iuc_android_workshop_01.remote.Data
@@ -22,10 +22,10 @@ import com.squareup.picasso.Picasso
 class MovieListViewHolder(parent: ViewGroup) : RecyclerView.ViewHolder(
     LayoutInflater.from(parent.context).inflate(R.layout.adapter_item_movie_list, parent, false)
 ) {
-    private val imgPoster = itemView.findViewById<AppCompatImageView>(R.id.imgPoster)
-    private val txtName = itemView.findViewById<AppCompatTextView>(R.id.txtName)
-    private val txtGenre = itemView.findViewById<AppCompatTextView>(R.id.txtGenre)
-    private val txtDirector = itemView.findViewById<AppCompatTextView>(R.id.txtDirector)
+    private val imgPoster = itemView.findViewById<ImageView>(R.id.imgPoster)
+    private val txtName = itemView.findViewById<TextView>(R.id.txtName)
+    private val txtGenre = itemView.findViewById<TextView>(R.id.txtGenre)
+    private val txtDirector = itemView.findViewById<TextView>(R.id.txtDirector)
 
     fun bind(data: Data, onItemClickListener: (Data) -> Unit) {
 
