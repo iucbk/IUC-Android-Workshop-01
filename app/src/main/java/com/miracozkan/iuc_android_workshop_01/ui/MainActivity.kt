@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import com.miracozkan.iuc_android_workshop_01.R
 import com.miracozkan.iuc_android_workshop_01.adapter.MovieListAdapter
-import com.miracozkan.iuc_android_workshop_01.remote.BaseResponse
+import com.miracozkan.iuc_android_workshop_01.remote.Data
 import com.miracozkan.iuc_android_workshop_01.remote.RetrofitClient
 import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //https://api.myjson.com/bins/h22f8
+        //baseUrl -> https://iuc-workshop.firebaseio.com/data.json
 
         val intent = Intent(this@MainActivity, DetailActivity::class.java)
 
@@ -34,15 +34,17 @@ class MainActivity : AppCompatActivity() {
             layoutManager = GridLayoutManager(this@MainActivity, 2)
         }
 
-        retrofitClient.getProjectService().fetchMovies().enqueue(object : Callback<BaseResponse> {
+        retrofitClient.getProjectService().fetchMovies().enqueue(object : Callback<List<Data>> {
 
-            override fun onFailure(call: Call<BaseResponse>, t: Throwable) {
-                Log.v("TESTT", t.message ?: "")
+            override fun onFailure(call: Call<List<Data>>, t: Throwable) {
+                Log.v("TESTT", t.message ?: "onFailure Error")
             }
 
-            override fun onResponse(call: Call<BaseResponse>, response: Response<BaseResponse>) {
-                Log.v("TESTT", response.body()?.data.toString())
-                (recycMovieList.adapter as MovieListAdapter).setNewList(response.body()?.data!!)
+            override fun onResponse(call: Call<List<Data>>, response: Response<List<Data>>) {
+                Log.v("TESTT", response.body()?.toString() ?: "onResponse Error")
+                (recycMovieList.adapter as MovieListAdapter).setNewList(
+                    response.body() ?: emptyList()
+                )
             }
         })
     }

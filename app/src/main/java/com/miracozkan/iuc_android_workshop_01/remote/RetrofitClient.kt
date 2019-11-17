@@ -15,7 +15,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class RetrofitClient {
 
-    private val baseUrl = "https://api.myjson.com/"
+    private val baseUrl = "https://iuc-workshop.firebaseio.com/"
 
     private val retrofit =
         Retrofit

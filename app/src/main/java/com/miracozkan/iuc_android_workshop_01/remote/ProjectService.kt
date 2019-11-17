@@ -15,7 +15,7 @@ import retrofit2.http.GET
 
 interface ProjectService {
 
-    @GET("bins/h22f8")
-    fun fetchMovies(): Call<BaseResponse>
+    @GET("data.json")
+    fun fetchMovies(): Call<List<Data>>
 
 }
