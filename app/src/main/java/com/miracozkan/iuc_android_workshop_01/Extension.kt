@@ -1,8 +1,6 @@
-package com.miracozkan.iuc_android_workshop_01.remote
+package com.miracozkan.iuc_android_workshop_01
 
-import com.miracozkan.iuc_android_workshop_01.remote.model.Data
-import retrofit2.Call
-import retrofit2.http.GET
+import android.view.View
 
 
 // Code with ❤
@@ -11,13 +9,13 @@ import retrofit2.http.GET
 //│ ─────────────────────────── │
 //│ mirac.ozkan123@gmail.com    │
 //│ ─────────────────────────── │
-//│ 12.11.2019 - 09:36          │
+//│ 20.11.2019 - 20:08          │
 //└─────────────────────────────┘
 
-interface ProjectService {
+fun View.show() {
+    this.visibility = View.VISIBLE
+}
 
-    @GET("data.json")
-    fun fetchMovies(
-    ): Call<List<Data>>
-
+fun View.hide() {
+    this.visibility = View.GONE
 }

@@ -6,10 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".ui.MainActivity">
 
-    <androidx.appcompat.widget.AppCompatImageView
+    <ImageView
         android:id="@+id/imgDetailPoster"
         android:layout_width="match_parent"
         android:layout_height="324dp"
+        android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,7 +31,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <androidx.appcompat.widget.AppCompatTextView
+            <TextView
                 android:id="@+id/txtMovieName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -41,9 +42,9 @@
                 app:layout_constraintStart_toStartOf="parent"
                 tools:text="John Wich 45" />
 
-            <androidx.appcompat.widget.AppCompatTextView
+            <TextView
                 android:id="@+id/txtMovieAbout"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
@@ -60,10 +61,18 @@
                         small boats manned by both military and civilians are mounting a desperate rescue
                         effort, risking their lives in a race against time to save even a fraction of their
                          army. Dunkirk features a multigenerational ensemble cast, including Fionn Whitehead,
+                          Tom Glynn-Carney, Jack Lowden, Harry Styles, Aneurin Barnard, James D’Arcy and       Trilogy) comes the epic action thriller Dunkirk.Dunkirk opens as hundreds of thousands
+                      of British and Allied troops are surrounded by enemy forces. Trapped on the beach with
+                       their backs to the sea, they face an impossible situation as the enemy closes in.
+                        The story unfolds on land, sea and air. RAF Spitfires engage the enemy in the skies
+                        above the Channel, trying to protect the defenselessmen below. Meanwhile,hundreds of
+                        small boats manned by both military and civilians are mounting a desperate rescue
+                        effort, risking their lives in a race against time to save even a fraction of their
+                         army. Dunkirk features a multigenerational ensemble cast, including Fionn Whitehead,
                           Tom Glynn-Carney, Jack Lowden, Harry Styles, Aneurin Barnard, James D’Arcy and
                           Barry Keoghan, with Kenneth Branagh, Cillian Murphy, Mark Rylance and Tom Hardy." />
 
-            <androidx.appcompat.widget.AppCompatTextView
+            <TextView
                 android:id="@+id/txtMovieDirector"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -74,7 +83,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 tools:text="Christopher Nolan" />
 
-            <androidx.appcompat.widget.AppCompatTextView
+            <TextView
                 android:id="@+id/txtMovieYear"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -83,7 +92,7 @@
                 app:layout_constraintStart_toEndOf="@+id/txtMovieGenre"
                 tools:text="2045" />
 
-            <androidx.appcompat.widget.AppCompatTextView
+            <TextView
                 android:id="@+id/txtMovieGenre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

@@ -2,7 +2,7 @@ package com.miracozkan.iuc_android_workshop_01.adapter
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.miracozkan.iuc_android_workshop_01.remote.Data
+import com.miracozkan.iuc_android_workshop_01.remote.model.Data
 
 
 // Code with ❤

@@ -6,7 +6,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.miracozkan.iuc_android_workshop_01.R
-import com.miracozkan.iuc_android_workshop_01.remote.Data
+import com.miracozkan.iuc_android_workshop_01.remote.model.Data
 import com.squareup.picasso.Picasso
 
 
@@ -32,6 +32,7 @@ class MovieListViewHolder(parent: ViewGroup) : RecyclerView.ViewHolder(
         txtDirector.text = data.director
         txtGenre.text = data.genre
         txtName.text = data.title
+
         Picasso
             .get()
             .load(data.poster)

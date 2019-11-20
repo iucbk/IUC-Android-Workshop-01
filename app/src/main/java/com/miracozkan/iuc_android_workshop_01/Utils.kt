@@ -1,8 +1,4 @@
-package com.miracozkan.iuc_android_workshop_01.remote
-
-import com.miracozkan.iuc_android_workshop_01.remote.model.Data
-import retrofit2.Call
-import retrofit2.http.GET
+package com.miracozkan.iuc_android_workshop_01
 
 
 // Code with ❤
@@ -11,13 +7,14 @@ import retrofit2.http.GET
 //│ ─────────────────────────── │
 //│ mirac.ozkan123@gmail.com    │
 //│ ─────────────────────────── │
-//│ 12.11.2019 - 09:36          │
+//│ 20.11.2019 - 20:08          │
 //└─────────────────────────────┘
 
-interface ProjectService {
+class Utils {
+    companion object {
 
-    @GET("data.json")
-    fun fetchMovies(
-    ): Call<List<Data>>
+        //baseUrl -> https://iuc-workshop.firebaseio.com/data.json
 
+        const val SPAN_COUNT = 2
+    }
 }

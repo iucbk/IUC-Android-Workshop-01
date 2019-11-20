@@ -1,10 +1,9 @@
 package com.miracozkan.iuc_android_workshop_01.ui
 
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.miracozkan.iuc_android_workshop_01.R
-import com.miracozkan.iuc_android_workshop_01.remote.Data
+import com.miracozkan.iuc_android_workshop_01.remote.model.Data
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_detail.*
 
@@ -16,14 +15,17 @@ class DetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
 
-        Log.v("TEST", movieItem?.title.toString())
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayShowHomeEnabled(true)
 
+        initUi()
+    }
+
+    private fun initUi() {
         movieItem?.let {
-
             Picasso
                 .get()
                 .load(it.poster)
-                .fit()
                 .into(imgDetailPoster)
 
             txtMovieAbout.text = it.about

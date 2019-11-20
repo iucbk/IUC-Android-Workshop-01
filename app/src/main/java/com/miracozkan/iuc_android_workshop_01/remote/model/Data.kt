@@ -1,4 +1,4 @@
-package com.miracozkan.iuc_android_workshop_01.remote
+package com.miracozkan.iuc_android_workshop_01.remote.model
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
