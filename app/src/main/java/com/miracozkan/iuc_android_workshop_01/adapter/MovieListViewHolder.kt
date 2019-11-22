@@ -6,6 +6,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.miracozkan.iuc_android_workshop_01.R
+import com.miracozkan.iuc_android_workshop_01.Utils
 import com.miracozkan.iuc_android_workshop_01.remote.model.Data
 import com.squareup.picasso.Picasso
 
@@ -24,18 +25,18 @@ class MovieListViewHolder(parent: ViewGroup) : RecyclerView.ViewHolder(
 ) {
     private val imgPoster = itemView.findViewById<ImageView>(R.id.imgPoster)
     private val txtName = itemView.findViewById<TextView>(R.id.txtName)
-    private val txtGenre = itemView.findViewById<TextView>(R.id.txtGenre)
-    private val txtDirector = itemView.findViewById<TextView>(R.id.txtDirector)
+    private val txtReleaseDate = itemView.findViewById<TextView>(R.id.txtReleaseDate)
+    private val txtPopularity = itemView.findViewById<TextView>(R.id.txtPopularity)
 
     fun bind(data: Data, onItemClickListener: (Data) -> Unit) {
 
-        txtDirector.text = data.director
-        txtGenre.text = data.genre
+        txtPopularity.text = data.popularity.toString()
+        txtReleaseDate.text = data.release_date
         txtName.text = data.title
 
         Picasso
             .get()
-            .load(data.poster)
+            .load(Utils.posterImageUrl + data.poster_path)
             .resize(64, 128)
             .into(imgPoster)
 

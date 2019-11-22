@@ -9,7 +9,7 @@
     <ImageView
         android:id="@+id/imgDetailPoster"
         android:layout_width="match_parent"
-        android:layout_height="324dp"
+        android:layout_height="256dp"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -17,91 +17,105 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:background="@color/colorAccent" />
 
-    <ScrollView
-        android:id="@+id/nstScrool"
+
+    <TextView
+        android:id="@+id/txtMovieName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/txtMovieYear"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgDetailPoster"
+        tools:text="John Wich 45" />
+
+    <TextView
+        android:id="@+id/txtMovieAbout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgDetailPoster">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:id="@+id/txtMovieName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginBottom="8dp"
-                android:textSize="24sp"
-                app:layout_constraintBottom_toTopOf="@+id/txtMovieDirector"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:text="John Wich 45" />
-
-            <TextView
-                android:id="@+id/txtMovieAbout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="8dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:text="From filmmaker Christopher Nolan (Interstellar, Inception, The Dark Knight
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:text="From filmmaker Christopher Nolan (Interstellar, Inception, The Dark Knight
                      Trilogy) comes the epic action thriller Dunkirk.Dunkirk opens as hundreds of thousands
                       of British and Allied troops are surrounded by enemy forces. Trapped on the beach with
-                       their backs to the sea, they face an impossible situation as the enemy closes in.
-                        The story unfolds on land, sea and air. RAF Spitfires engage the enemy in the skies
-                        above the Channel, trying to protect the defenselessmen below. Meanwhile,hundreds of
-                        small boats manned by both military and civilians are mounting a desperate rescue
-                        effort, risking their lives in a race against time to save even a fraction of their
-                         army. Dunkirk features a multigenerational ensemble cast, including Fionn Whitehead,
-                          Tom Glynn-Carney, Jack Lowden, Harry Styles, Aneurin Barnard, James D’Arcy and       Trilogy) comes the epic action thriller Dunkirk.Dunkirk opens as hundreds of thousands
-                      of British and Allied troops are surrounded by enemy forces. Trapped on the beach with
-                       their backs to the sea, they face an impossible situation as the enemy closes in.
-                        The story unfolds on land, sea and air. RAF Spitfires engage the enemy in the skies
-                        above the Channel, trying to protect the defenselessmen below. Meanwhile,hundreds of
-                        small boats manned by both military and civilians are mounting a desperate rescue
-                        effort, risking their lives in a race against time to save even a fraction of their
                          army. Dunkirk features a multigenerational ensemble cast, including Fionn Whitehead,
                           Tom Glynn-Carney, Jack Lowden, Harry Styles, Aneurin Barnard, James D’Arcy and
                           Barry Keoghan, with Kenneth Branagh, Cillian Murphy, Mark Rylance and Tom Hardy." />
 
-            <TextView
-                android:id="@+id/txtMovieDirector"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginBottom="8dp"
-                android:textSize="16sp"
-                app:layout_constraintBottom_toTopOf="@+id/txtMovieGenre"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:text="Christopher Nolan" />
+    <TextView
+        android:id="@+id/txtOrginalLang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtMovieName"
+        tools:text="en" />
 
             <TextView
                 android:id="@+id/txtMovieYear"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                app:layout_constraintBottom_toBottomOf="@+id/txtMovieGenre"
-                app:layout_constraintStart_toEndOf="@+id/txtMovieGenre"
-                tools:text="2045" />
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/txtOrginalLang"
+                app:layout_constraintTop_toTopOf="@+id/txtOrginalLang"
+                tools:text="11.11.2045" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Popularity : "
+        app:layout_constraintStart_toStartOf="@+id/txtMovieName"
+        app:layout_constraintTop_toBottomOf="@+id/txtMovieName" />
+
+    <TextView
+        android:id="@+id/txtPopularityDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="@+id/textView2"
+        tools:text="11112045" />
 
             <TextView
-                android:id="@+id/txtMovieGenre"
+                android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginBottom="8dp"
-                app:layout_constraintBottom_toTopOf="@+id/txtMovieAbout"
+                android:layout_marginTop="8dp"
+                android:text="Orginal Name : "
                 app:layout_constraintStart_toStartOf="parent"
-                tools:text="Action" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+                app:layout_constraintTop_toBottomOf="@+id/txtPopularityDetail" />
+
+    <TextView
+        android:id="@+id/txtOrgName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/textView"
+        tools:text="Test" />
+
+    <TextView
+        android:id="@+id/txtVoteAverage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMovieYear"
+        tools:text="8.4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

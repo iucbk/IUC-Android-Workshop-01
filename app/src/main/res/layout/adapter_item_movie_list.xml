@@ -36,18 +36,18 @@
                 tools:text="John Wick 45" />
 
             <TextView
-                android:id="@+id/txtGenre"
+                android:id="@+id/txtReleaseDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
-                tools:text="Yeşilcam" />
+                tools:text="21.12.1009" />
 
             <TextView
-                android:id="@+id/txtDirector"
+                android:id="@+id/txtPopularity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="Christopher Nolan" />
+                tools:text="318.102" />
 
         </LinearLayout>
 

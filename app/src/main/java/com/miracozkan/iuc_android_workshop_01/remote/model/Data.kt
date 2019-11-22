@@ -5,11 +5,14 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class Data(
-    val about: String,
-    val director: String,
-    val genre: String,
+    val backdrop_path: String,
     val id: Int,
-    val poster: String,
+    val original_language: String,
+    val original_title: String,
+    val overview: String,
+    val popularity: Double,
+    val poster_path: String,
+    val release_date: String,
     val title: String,
-    val year: String
+    val vote_average: Double
 ) : Parcelable
