@@ -12,8 +12,8 @@ package com.miracozkan.iuc_android_workshop_01
 
 class Utils {
     companion object {
-
-        //baseUrl -> https://iuc-workshop.firebaseio.com/data.json
+        //endPoint -> https://iuc-workshop.firebaseio.com/data.json
+        const val baseUrl = "https://iuc-workshop.firebaseio.com/"
         const val posterImageUrl = "https://image.tmdb.org/t/p/w300"
         const val backImageUrl = "https://image.tmdb.org/t/p/w500"
         const val SPAN_COUNT = 2

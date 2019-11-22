@@ -29,9 +29,9 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this@MainActivity, DetailActivity::class.java)
 
         prgBar.show()
+
         initUi(intent)
         fetchData()
-
     }
 
     private fun initUi(intent: Intent) {

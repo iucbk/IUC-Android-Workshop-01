@@ -18,6 +18,7 @@ class MovieListAdapter(
     private var movieList: List<Data>? = null,
     private val onItemClickListener: (Data) -> Unit
 ) : RecyclerView.Adapter<MovieListViewHolder>() {
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieListViewHolder =
         MovieListViewHolder(parent)
 
@@ -36,4 +37,5 @@ class MovieListAdapter(
         this.movieList = movieList
         notifyDataSetChanged()
     }
+
 }

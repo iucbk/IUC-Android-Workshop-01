@@ -1,5 +1,6 @@
 package com.miracozkan.iuc_android_workshop_01.remote
 
+import com.miracozkan.iuc_android_workshop_01.Utils
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
@@ -15,12 +16,10 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class RetrofitClient {
 
-    private val baseUrl = "https://iuc-workshop.firebaseio.com/"
-
     private val retrofit =
         Retrofit
             .Builder()
-            .baseUrl(baseUrl)
+            .baseUrl(Utils.baseUrl)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
