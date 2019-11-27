@@ -19,8 +19,9 @@ import retrofit2.Response
 
 class MainActivity : AppCompatActivity() {
 
-    private val retrofitClient = RetrofitClient()
-
+    private val retrofitClient by lazy {
+        RetrofitClient()
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
